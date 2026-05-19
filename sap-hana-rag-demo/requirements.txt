@@ -1,0 +1,14 @@
+hdbcli
+hana-ml
+langchain
+langchain-hana
+langchain-google-genai
+langchain-community
+pypdf
+python-dotenv
+jupyter
+notebook
+pandas
+numpy
+matplotlib
+tqdm

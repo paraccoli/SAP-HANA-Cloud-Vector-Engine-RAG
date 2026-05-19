@@ -1,0 +1,25 @@
+# SAP HANA Cloud × RAG Demo
+
+# 環境・シークレット
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# データ（生PDFは軽量のため含めてもOK、大きければ除外）
+# data/raw/*.pdf
+
+# 結果（必要に応じてコミット）
+# results/
+
+# macOS
+.DS_Store
