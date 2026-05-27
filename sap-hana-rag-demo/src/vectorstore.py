@@ -1,6 +1,6 @@
 """
-vectorstore.py - SAP HANA Cloud Vector Store 操作モジュール
-企画書 Step 3 に対応（02_vectorstore.ipynb のバックエンド）
+vectorstore.py - SAP HANA Cloud Vector Store Operation Module
+Corresponding to Step 3 of the proposal (backend for 02_vectorstore.ipynb)
 Embedding: Google Gemini text-embedding-004
 """
 import os
@@ -16,12 +16,12 @@ load_dotenv()
 
 TABLE_NAME = "SAP_RAG_DOCS"
 
-# Gemini Embedding モデル（768次元 / 無料枠あり）
+# Gemini Embedding Model (768 dimensions / free tier available)
 EMBEDDING_MODEL = "models/gemini-embedding-001"
 
 
 def get_connection() -> dbapi.Connection:
-    """SAP HANA Cloud への接続を確立する"""
+    """Establish a connection to SAP HANA Cloud"""
     conn = dbapi.connect(
         address=os.getenv("HANA_DB_ADDRESS"),
         port=int(os.getenv("HANA_DB_PORT", "443")),
@@ -30,12 +30,12 @@ def get_connection() -> dbapi.Connection:
         encrypt=True,
         sslValidateCertificate=False,
     )
-    print("✅ SAP HANA Cloud 接続成功")
+    print("SAP HANA Cloud connection successful")
     return conn
 
 
 def get_embeddings() -> GoogleGenerativeAIEmbeddings:
-    """Gemini Embedding モデルを返す"""
+    """Return Gemini Embedding model"""
     return GoogleGenerativeAIEmbeddings(
         model=EMBEDDING_MODEL,
         google_api_key=os.getenv("GOOGLE_API_KEY"),
@@ -43,7 +43,7 @@ def get_embeddings() -> GoogleGenerativeAIEmbeddings:
 
 
 def get_vectorstore(conn: dbapi.Connection, table_name: str = TABLE_NAME) -> HanaDB:
-    """HanaDB VectorStore インスタンスを返す"""
+    """Return HanaDB VectorStore instance"""
     vectorstore = HanaDB(
         connection=conn,
         embedding=get_embeddings(),
@@ -59,8 +59,8 @@ def ingest_documents(
     batch_size: int = 20,
 ) -> HanaDB:
     """
-    チャンクを SAP HANA Cloud に格納する
-    Gemini Free Tier: 100 req/min → batch_size=20 で 3秒待機しながら安全に投入
+    Store chunks into SAP HANA Cloud
+    Gemini Free Tier: 100 req/min -> Batch safe ingestion with batch_size=20 and 3 seconds wait
     """
     import time
 
@@ -69,8 +69,8 @@ def ingest_documents(
 
     vectorstore = get_vectorstore(conn, table_name)
     total = len(chunks)
-    print(f"ベクトル格納開始: {total} チャンク → {table_name}")
-    print(f"（バッチサイズ={batch_size}, レート制限対応モード）")
+    print(f"Starting vector ingestion: {total} chunks -> {table_name}")
+    print(f"(batch_size={batch_size}, rate limit handling mode)")
 
     t0 = time.time()
     for i in range(0, total, batch_size):
@@ -83,7 +83,7 @@ def ingest_documents(
             except Exception as e:
                 if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
                     wait = 30 * (retries + 1)
-                    print(f"  ⚠️  レート制限 → {wait}秒待機してリトライ...")
+                    print(f"  Rate limit reached -> waiting {wait} seconds to retry...")
                     time.sleep(wait)
                     retries += 1
                 else:
@@ -91,13 +91,13 @@ def ingest_documents(
 
         done = min(i + batch_size, total)
         elapsed = time.time() - t0
-        print(f"  進捗: {done}/{total} ({elapsed:.0f}秒経過)")
+        print(f"  Progress: {done}/{total} ({elapsed:.0f} seconds elapsed)")
 
-        # 60秒あたり100リクエスト制限 → batch_size=20なら3秒待機で安全
+        # Limit of 100 requests per 60 seconds -> waiting 3 seconds for batch_size=20 is safe
         if done < total:
             time.sleep(3)
 
-    print(f"✅ 全 {total} チャンク格納完了（合計 {time.time()-t0:.0f}秒）")
+    print(f"Ingestion completed for all {total} chunks (total {time.time()-t0:.0f} seconds)")
     return vectorstore
 
 
@@ -107,10 +107,11 @@ def similarity_search(
     k: int = 3,
     table_name: str = TABLE_NAME,
 ) -> List[Document]:
-    """類似度検索（COSINE_SIMILARITY）を実行する"""
+    """Execute similarity search (COSINE_SIMILARITY)"""
     if conn is None:
         conn = get_connection()
 
     vectorstore = get_vectorstore(conn, table_name)
     results = vectorstore.similarity_search(query, k=k)
     return results
+

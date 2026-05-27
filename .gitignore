@@ -15,3 +15,7 @@ venv/
 
 # macOS
 .DS_Store
+
+# PDF data
+*.pdf
+**/data/raw/*.pdf

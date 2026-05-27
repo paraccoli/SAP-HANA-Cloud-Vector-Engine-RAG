@@ -15,5 +15,5 @@ conn = dbapi.connect(
 
 cursor = conn.cursor()
 cursor.execute("SELECT VERSION FROM SYS.M_DATABASE")
-print("接続成功！ HANA Version:", cursor.fetchone()[0])
+print("Connection successful! HANA Version:", cursor.fetchone()[0])
 conn.close()

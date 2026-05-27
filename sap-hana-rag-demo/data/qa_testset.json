@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "query": "SAP HANA Cloud 入門ガイドの主な目的と、それが何に適合するように設計されているか教えてください。",
+    "expected_source": "hana_cloud_intro_ja.pdf",
+    "expected_page": 0
+  },
+  {
+    "id": 2,
+    "query": "SAP HANA Cloud の管理と開発のために提供されているツールには何がありますか？",
+    "expected_source": "hana_cloud_intro_ja.pdf",
+    "expected_page": 0
+  },
+  {
+    "id": 3,
+    "query": "SAP HANA Cloud におけるデータ階層化（Data Tiering）の概念について説明してください。",
+    "expected_source": "hana_cloud_intro_ja.pdf",
+    "expected_page": 1
+  },
+  {
+    "id": 4,
+    "query": "SAP BTP サブアカウントで利用可能な SAP HANA Cloud の初期設定やアクセス方法について教えてください。",
+    "expected_source": "hana_cloud_intro_ja.pdf",
+    "expected_page": 1
+  },
+  {
+    "id": 5,
+    "query": "SAP HANA Cloud でサポートされている主要なデータベース技術（エンジン）の構成は何ですか？",
+    "expected_source": "hana_cloud_intro_ja.pdf",
+    "expected_page": 1
+  },
+  {
+    "id": 6,
+    "query": "On which cloud infrastructures (hyperscalers) is SAP HANA Cloud available?",
+    "expected_source": "hana_cloud_feature_scope_en.pdf",
+    "expected_page": 2
+  },
+  {
+    "id": 7,
+    "query": "What is the purpose of the Feature Scope Description document for SAP HANA Cloud?",
+    "expected_source": "hana_cloud_feature_scope_en.pdf",
+    "expected_page": 2
+  },
+  {
+    "id": 8,
+    "query": "Does SAP HANA Cloud support Spatial and Property Graph data processing?",
+    "expected_source": "hana_cloud_feature_scope_en.pdf",
+    "expected_page": 8
+  },
+  {
+    "id": 9,
+    "query": "What are the capabilities of the JSON Document Store (DocStore) in SAP HANA Cloud?",
+    "expected_source": "hana_cloud_feature_scope_en.pdf",
+    "expected_page": 9
+  },
+  {
+    "id": 10,
+    "query": "What is the maximum number of dimensions supported by the REAL_VECTOR type in SAP HANA Cloud?",
+    "expected_source": "hana_cloud_feature_scope_en.pdf",
+    "expected_page": 7
+  },
+  {
+    "id": 11,
+    "query": "Does SAP HANA Cloud Vector Engine support cosine similarity and L2 distance?",
+    "expected_source": "hana_cloud_feature_scope_en.pdf",
+    "expected_page": 7
+  },
+  {
+    "id": 12,
+    "query": "How is Machine Learning supported in SAP HANA Cloud? Mention the main libraries.",
+    "expected_source": "hana_cloud_feature_scope_en.pdf",
+    "expected_page": 13
+  },
+  {
+    "id": 13,
+    "query": "What is the default port and connection type used for connecting to SAP HANA Cloud?",
+    "expected_source": "sap-hana-cloud-manage-guide.pdf",
+    "expected_page": 25
+  },
+  {
+    "id": 14,
+    "query": "How can an administrator temporarily stop or restart an active SAP HANA Cloud instance?",
+    "expected_source": "sap-hana-cloud-manage-guide.pdf",
+    "expected_page": 50
+  },
+  {
+    "id": 15,
+    "query": "Explain how database backups are created and what the retention period is in SAP HANA Cloud.",
+    "expected_source": "sap-hana-cloud-manage-guide.pdf",
+    "expected_page": 82
+  },
+  {
+    "id": 16,
+    "query": "What are the prerequisite roles or privileges required to access SAP HANA Cloud Central?",
+    "expected_source": "sap-hana-cloud-manage-guide.pdf",
+    "expected_page": 15
+  },
+  {
+    "id": 17,
+    "query": "What is SAP HANA Native Storage Extension (NSE) and how does it optimize storage costs?",
+    "expected_source": "sap-hana-cloud-manage-guide.pdf",
+    "expected_page": 120
+  },
+  {
+    "id": 18,
+    "query": "How are security and network access restricted (such as IP Whitelisting) in SAP HANA Cloud?",
+    "expected_source": "sap-hana-cloud-manage-guide.pdf",
+    "expected_page": 40
+  },
+  {
+    "id": 19,
+    "query": "What is the role of SAP BTP Cockpit in managing HANA Cloud instances?",
+    "expected_source": "sap-hana-cloud-manage-guide.pdf",
+    "expected_page": 12
+  },
+  {
+    "id": 20,
+    "query": "Does SAP HANA Cloud support automatic database scaling (compute and storage)?",
+    "expected_source": "sap-hana-cloud-manage-guide.pdf",
+    "expected_page": 62
+  }
+]

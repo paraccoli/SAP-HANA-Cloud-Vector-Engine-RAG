@@ -1,0 +1,21 @@
+﻿id,query,expected_source,expected_page,bm25_doc_hit,bm25_page_hit,bm25_doc_mrr,bm25_page_mrr,bm25_latency,vec_doc_hit,vec_page_hit,vec_doc_mrr,vec_page_mrr,vec_latency,rag_doc_hit,rag_page_hit,rag_doc_mrr,rag_page_mrr,rag_latency,rag_cost_yen
+1,SAP HANA Cloud 入門ガイドの主な目的と、それが何に適合するように設計されているか教えてください。,hana_cloud_intro_ja.pdf,0,1,0,1.0,0.0,9.5,1,0,1.0,0.0,754.9,1,0,1.0,0.0,3107.6,0.0305
+2,SAP HANA Cloud の管理と開発のために提供されているツールには何がありますか？,hana_cloud_intro_ja.pdf,0,1,0,0.3333333333333333,0.0,26.5,1,0,1.0,0.0,557.9,1,0,1.0,0.0,4787.7,0.03423
+3,SAP HANA Cloud におけるデータ階層化（Data Tiering）の概念について説明してください。,hana_cloud_intro_ja.pdf,1,1,1,1.0,1.0,24.5,1,1,1.0,1.0,639.5,1,1,1.0,1.0,3996.8,0.02812
+4,SAP BTP サブアカウントで利用可能な SAP HANA Cloud の初期設定やアクセス方法について教えてください。,hana_cloud_intro_ja.pdf,1,0,0,0.0,0.0,26.9,1,1,0.5,0.5,616.6,1,1,0.5,0.5,6289.2,0.04564
+5,SAP HANA Cloud でサポートされている主要なデータベース技術（エンジン）の構成は何ですか？,hana_cloud_intro_ja.pdf,1,1,0,1.0,0.0,28.6,1,0,1.0,0.0,537.2,1,0,1.0,0.0,2553.9,0.02646
+6,On which cloud infrastructures (hyperscalers) is SAP HANA Cloud available?,hana_cloud_feature_scope_en.pdf,2,1,0,1.0,0.0,10.3,1,0,1.0,0.0,618.2,1,0,1.0,0.0,3089.5,0.02772
+7,What is the purpose of the Feature Scope Description document for SAP HANA Cloud?,hana_cloud_feature_scope_en.pdf,2,1,1,1.0,1.0,11.5,1,0,1.0,0.0,585.1,1,0,1.0,0.0,3289.7,0.0289
+8,Does SAP HANA Cloud support Spatial and Property Graph data processing?,hana_cloud_feature_scope_en.pdf,8,1,0,1.0,0.0,11.0,1,1,1.0,1.0,683.3,1,1,1.0,1.0,7609.3,0.05564
+9,What are the capabilities of the JSON Document Store (DocStore) in SAP HANA Cloud?,hana_cloud_feature_scope_en.pdf,9,1,0,1.0,0.0,11.5,1,1,1.0,1.0,516.7,1,1,1.0,1.0,3426.0,0.04192
+10,What is the maximum number of dimensions supported by the REAL_VECTOR type in SAP HANA Cloud?,hana_cloud_feature_scope_en.pdf,7,1,0,1.0,0.0,12.1,1,0,1.0,0.0,584.5,1,0,1.0,0.0,2871.5,0.02414
+11,Does SAP HANA Cloud Vector Engine support cosine similarity and L2 distance?,hana_cloud_feature_scope_en.pdf,7,1,0,1.0,0.0,10.5,1,0,1.0,0.0,685.6,1,0,1.0,0.0,3083.8,0.02377
+12,How is Machine Learning supported in SAP HANA Cloud? Mention the main libraries.,hana_cloud_feature_scope_en.pdf,13,1,1,1.0,1.0,8.4,1,0,1.0,0.0,581.5,1,0,1.0,0.0,4017.1,0.04014
+13,What is the default port and connection type used for connecting to SAP HANA Cloud?,sap-hana-cloud-manage-guide.pdf,25,0,0,0.0,0.0,11.1,0,0,0.0,0.0,541.6,0,0,0.0,0.0,3525.1,0.02481
+14,How can an administrator temporarily stop or restart an active SAP HANA Cloud instance?,sap-hana-cloud-manage-guide.pdf,50,0,0,0.0,0.0,11.8,0,0,0.0,0.0,579.1,0,0,0.0,0.0,2908.4,0.0285
+15,Explain how database backups are created and what the retention period is in SAP HANA Cloud.,sap-hana-cloud-manage-guide.pdf,82,0,0,0.0,0.0,12.9,1,0,1.0,0.0,638.1,1,0,1.0,0.0,9019.4,0.08782
+16,What are the prerequisite roles or privileges required to access SAP HANA Cloud Central?,sap-hana-cloud-manage-guide.pdf,15,0,0,0.0,0.0,10.9,1,0,1.0,0.0,754.7,1,0,1.0,0.0,4509.8,0.04537
+17,What is SAP HANA Native Storage Extension (NSE) and how does it optimize storage costs?,sap-hana-cloud-manage-guide.pdf,120,0,0,0.0,0.0,12.1,0,0,0.0,0.0,616.9,0,0,0.0,0.0,3634.7,0.03921
+18,How are security and network access restricted (such as IP Whitelisting) in SAP HANA Cloud?,sap-hana-cloud-manage-guide.pdf,40,0,0,0.0,0.0,9.1,0,0,0.0,0.0,501.6,0,0,0.0,0.0,96217.4,0.03357
+19,What is the role of SAP BTP Cockpit in managing HANA Cloud instances?,sap-hana-cloud-manage-guide.pdf,12,0,0,0.0,0.0,11.3,0,0,0.0,0.0,667.0,0,0,0.0,0.0,3973.0,0.03396
+20,Does SAP HANA Cloud support automatic database scaling (compute and storage)?,sap-hana-cloud-manage-guide.pdf,62,0,0,0.0,0.0,9.5,0,0,0.0,0.0,524.8,0,0,0.0,0.0,18317.6,0.03675
