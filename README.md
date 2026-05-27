@@ -24,7 +24,7 @@
 ## 2. システムアーキテクチャ
 
 本システムは、PDF等のドキュメントソースをロードしてチャンク分割し、ベクトルデータを永続化する「インジェストパイプライン」と、ユーザーのクエリに基づいて関連情報を検索し回答を生成する「RAGクエリパイプライン」の2系統から構成されます。
-詳細なアーキテクチャ図については [docs/architecture.md](docs/architecture.md) を参照してください。
+詳細なアーキテクチャ図については [sap-hana-rag-demo/docs/architecture.md](sap-hana-rag-demo/docs/architecture.md) を参照してください。
 
 ```mermaid
 flowchart TD
@@ -110,7 +110,7 @@ flowchart TD
 | **平均レイテンシ** | **14.00 ms** | 609.24 ms | 9,511.38 ms |
 | **平均コスト / クエリ**| 0 円 | 0 円 | **0.0369 円** |
 
-* 評価比較グラフは [results/figures/](results/figures/) に出力されます。
+* 評価比較グラフは [sap-hana-rag-demo/results/figures/](sap-hana-rag-demo/results/figures/) に出力されます。
 
 ### 実験の考察
 
